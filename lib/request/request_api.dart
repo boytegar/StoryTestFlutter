@@ -10,5 +10,5 @@ abstract class RestClient {
   @GET("topstories.json?print=pretty")
   Future<List<int>> getListStory();
   @GET("item/{ids}.json?print=pretty")
-  Future<DetailStory> getDetailStory();
+  Future<DetailStory> getDetailStory(@Path("ids") String ids);
 }
